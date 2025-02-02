@@ -104,6 +104,9 @@ if file is not None:
             chain = load_qa_chain(llm, chain_type="stuff")
             response = chain.run(input_documents=matches, question=user_question)
 
+            if response == "I don't know":
+                st.write("Please contact Jamuna - jamunaranik@hexaware.com")
+            else :
             # Display the response from the LLM
             st.write(response)
 
