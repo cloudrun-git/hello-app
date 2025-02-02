@@ -107,8 +107,8 @@ if file is not None:
             if response == "I don't know.":
                 st.write("Please contact Jamuna - jamunaranik@hexaware.com")
             else :
-            # Display the response from the LLM
-            st.write(response)
+                # Display the response from the LLM
+                st.write(response)
 
         except Exception as e:
             st.error(f"Error during similarity search or LLM execution: {e}")
