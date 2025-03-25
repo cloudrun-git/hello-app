@@ -33,13 +33,14 @@ try:
         model=os.getenv('AZURE_MODEL'),
         api_key=os.getenv('AZURE_API_KEY'),
     )
-    st.success("LLM initialized successfully!")
+   # st.success("LLM initialized successfully!") new comment
 except Exception as e:
     st.error(f"Error initializing LLM: {e}")
     st.stop()
 
 # Upload PDF files
-st.header("My First Chatbot")
+# st.header("My First Chatbot") new comment
+st.header("FAQ HBot App")
 
 # with st.sidebar:
 #     st.title("Your Documents")
