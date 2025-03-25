@@ -99,7 +99,7 @@ if file is not None:
     if user_question:
         try:
             # Perform the similarity search to retrieve relevant documents
-            matches = vector_store.similarity_search("When will the registrations start")
+            matches = vector_store.similarity_search(user_question)
 
             # Load the QA chain and pass the matched documents
             chain = load_qa_chain(llm, chain_type="stuff")
