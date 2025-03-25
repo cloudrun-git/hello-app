@@ -79,7 +79,7 @@ if file is not None:
 
 
         )
-        st.success("Embeddings initialized successfully!")
+       # st.success("Embeddings initialized successfully!") new comment
     except Exception as e:
         st.error(f"Error initializing embeddings: {e}")
         st.stop()
@@ -88,7 +88,7 @@ if file is not None:
     try:
         # Ensure embeddings are passed properly (textual data, not embeddings themselves)
         vector_store = FAISS.from_texts(chunks, embeddings)
-        st.success("Vector store created successfully!")
+       # st.success("Vector store created successfully!") new comment
     except Exception as e:
         st.error(f"Error creating vector store: {e}")
         st.stop()
@@ -99,7 +99,7 @@ if file is not None:
     if user_question:
         try:
             # Perform the similarity search to retrieve relevant documents
-            matches = vector_store.similarity_search(user_question)
+            matches = vector_store.similarity_search("When will the registrations start")
 
             # Load the QA chain and pass the matched documents
             chain = load_qa_chain(llm, chain_type="stuff")
